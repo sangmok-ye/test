@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+#container.sub section{width: 100%; max-width: 768px; margin: 0 auto; padding: 50px 0; position: relative;}
+
+.sub .title{position: relative; margin-bottom: 30px;;}
+.sub .title h5{font-size: 32px; line-height: 1em; color: #6667ab; margin-bottom: 5px;}
+.sub .title em{font-size: 16px; color: #666; font-style: normal;}
+.sub .title .more{width: 150px; height: 50px;background: #fff; border-radius: 15px; position: fixed; top: 50px; right: calc(50% - 768px / 2);  text-align: center; border-color: #6667ab; cursor: pointer; transition: all .3s;}
+.sub .title .more:hover{background: #6667ab;}
+.sub .title .more a{display: block; line-height: 50px; color: #6667ab;}
+.sub .title .more:hover a{color: #fff;}
+
+.sub .desc{margin-bottom: 75px;}
+.sub .desc .photo{margin-bottom: 20px; ;}
+
+.sub .desc .info{margin-bottom: 30px;}
+.sub .desc .info dl{display: flex; font-size: 16px; line-height: 2em;}
+.sub .desc .info dl dt{color: #6667ab; }
+.sub .desc .info dl dd{ margin-left: 10px; text-transform: uppercase; }
+.sub .desc .info dl dd::after{content: "/";margin-left: 10px;}
+.sub .desc .info dl dd:last-child:after{display: none;}
+.sub .text{ font-size: 16px; line-height: 1.5em; margin-bottom: 75px; }
+
+
+.sub .desc{margin-bottom: 75px;}
+.sub .desc .sub_photo img{margin-bottom: 50px;}
+
+.sub .btn{display: flex; justify-content: space-between; position: fixed; top: 50%; left: 50%; width: 100%;max-width: 900px; transform: translate(-50%, -50%); }
+.sub [class*="btn_"] a{display: block; position: relative; font-size: 14px; line-height: 1em; padding: 0 20px;}
+
+.sub .btn_prev a::after{content: ""; display: block; width: 14px; height: 14px; background: url(../images/down-arrow.png) no-repeat center / 200% auto; transform: translateY(-50%) rotate(90deg) ; position: absolute; top: 50%; left: 0; ;}
+
+.sub .btn_next a::after{content: ""; display: block; width: 14px; height: 14px; background: url(../images/down-arrow.png) no-repeat center / 200% auto; transform: translateY(-50%) rotate(-90deg) ; position: absolute; top: 50%; right: 0; ;}
+
+/* 제이라로비 상세페이지 */
+#container.sub.work_gallery section{padding: 0;}
+.work_gallery [class*=btn_]{position: fixed; top: 50%; opacity: .4; transition: all .3s;}
+.work_gallery .btn_prev{left: 20px;}
+.work_gallery .btn_next{right: 20px}
+
+
+.work_gallery [class*=btn_]:hover{opacity: 1;}
+.work_gallery [class*=btn_] a{padding: 20px;}
+
+
+
+@media all and (max-width:1024px) {
+
+    #container.sub section{padding: 50px 20px;}
+}
+@media all and (max-width:768px) {
+    .sub .title .more{right: 20px; width: 20vw; height: calc(20vw / 3 ); border-radius: 2vw; background: #6667ab;}
+    .sub .title .more a{line-height: calc(20vw / 3); font-size: 2.8vw; color: #fff;}
+
+    .sub .title h5{font-size: 4vw;}
+    .sub .title em{font-size: 3.2vw}
+    
+    .sub .desc .info{margin-bottom: 2vw;}
+    .sub .desc .info dl{font-size: 3.2vw; flex-flow: wrap; }
+    
+    .sub .text{font-size: 3.6vw; margin-bottom: 5vw;}
+
+    .sub .btn{position: static; transform: translate(0,0);}
+
+    
+    .work_gallery [class*=btn_]{opacity: 1;}
+}
